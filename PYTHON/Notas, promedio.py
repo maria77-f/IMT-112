@@ -4,8 +4,8 @@ notasestudiantes=[]
 for  estudiante in range(3):
     print(f"Ingresando notas para el estudiante {estudiante+1}:")
     notas=[]
-    for nota.estudiante in range (3):
-        nota=float(input(f"Ingrese la nota {nota.estudiante+1}:"))
+    for i in range (3):
+        nota=float(input(f"Ingrese la nota {i+1}:"))
         notas.append(nota)
     notasestudiantes.append(notas)
 
