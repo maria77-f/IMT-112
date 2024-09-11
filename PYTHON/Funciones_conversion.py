@@ -1,4 +1,4 @@
-def longitud(metros):
+ef longitud(metros):
     return metros / 1000
 
 def masa(gramos):
