@@ -1,0 +1,10 @@
+import funciones2 as fun
+numero1=10
+numero2=20
+
+resultado=f.suma(numero1, numero2)
+print(resultado)
+
+def p_list(lista):
+for i in range(len(lista)):
+print(f"indice={i})
