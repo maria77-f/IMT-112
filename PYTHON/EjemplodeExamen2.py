@@ -3,16 +3,16 @@ def main():
     lista = []  # Lista que se utilizará en las diferentes opciones del menú
 
     while True:
-        # Menú de opciones
         print("Menú Principal")
         print("1. Ingresar lista manualmente")
         print("2. Generar lista aleatoria")
         print("3. Ordenar lista")
         print("4. Búsqueda lineal")
         print("5. Búsqueda binaria")
-        print("6. Salir")
+        print("6. Descomponer número en dígitos")
+        print("7. Salir")
 
-        # Solicita una opción al usuario
+        
         opcion = input("Selecciona una opción: ")
 
         if opcion == '1':
@@ -68,10 +68,25 @@ def main():
                 print("La lista está vacía. Primero debes ingresar o generar una lista.")
 
         elif opcion == '6':
-            # Salir del programa
-            print("Saliendo del programa.")
-            break
+            if lista_manual or lista_aleatoria:
+                lista_a_descomponer = elegir_lista()
+                if lista_a_descomponer == 'manual':
+                    numero = int(input("Elige un número de la lista manual para descomponer: "))
+                    if numero in lista_manual:
+                        print(f"Los dígitos de {numero} son:", f.descomponer_numero(numero))
+                    else:
+                        print(f"El número {numero} no está en la lista.")
+                elif lista_a_descomponer == 'aleatoria':
+                    numero = int(input("Elige un número de la lista aleatoria para descomponer: "))
+                    if numero in lista_aleatoria:
+                        print(f"Los dígitos de {numero} son:", f.descomponer_numero(numero))
+                    else:
+                        print(f"El número {numero} no está en la lista.")
+            else:
+                print("No hay listas generadas aún.")
 
         else:
             # Mensaje de error para opciones no válidas
             print("Opción no válida. Por favor, selecciona una opción del 1 al 6.")
+main()
+
