@@ -5,7 +5,7 @@ def main():
     lista_aleatoria = []
     lista_ordenada = []
     while True:
-        print("Menú Principal")
+        print("---Menú Principal---")
         print("1. Ingresar lista manualmente")
         print("2. Generar lista aleatoria")
         print("3. Ordenar lista")
@@ -18,11 +18,11 @@ def main():
         opcion = input("Selecciona una opción: ")
 
         if opcion == '1':
-            lista_manual = f.ingresar_lista()
+            lista_manual = f.ingresar_lista() # Generar una lista única de números ingresados por teclado.
 
         elif opcion == '2':
-            n = int(input("¿Cuántos números aleatorios deseas generar? "))
-            lista_aleatoria = f.generar_lista_aleatoria(n)
+            n = int(input("¿Cuántos números aleatorios deseas generar?: "))
+            lista_aleatoria = f.generar_lista_aleatoria(n) # Generar una lista de n números aleatorios únicos.
 
         elif opcion == '3':
             if lista_manual or lista_aleatoria:
